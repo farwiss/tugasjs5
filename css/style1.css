@@ -1,0 +1,22 @@
+body {
+  text-align: center;
+  margin: auto;
+  background-color: khaki;
+}
+
+#div1,
+#div2,
+#div3 {
+  display: inline-block;
+  margin: auto;
+  width: 70%;
+  justify-content: center;
+  font-size: large;
+  color: green;
+  border: 3px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  background: greenyellow;
+  height: 200px;
+  cursor: pointer;
+}

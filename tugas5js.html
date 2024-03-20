@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Handler</title>
+    <link rel="stylesheet" href="css/style1.css" />
+  </head>
+  <body>
+    <h1 style="text-align: center">
+      Letakkan kursor ke arah kotak untuk melihat dan mendengan suara
+    </h1>
+    <div id="div1">KUCING - CAT</div>
+    <div id="div2">AYAM - CHICKEN</div>
+    <div id="div3">ANJING - DOG</div>
+
+    <!-- memanggil sound / audio effect -->
+    <audio id="catsound" src="/audio/soundkucing.mp3"></audio>
+    <audio id="chicksound" src="/audio/soundayam.mp3"></audio>
+    <audio id="dogsound" src="/audio/soundanjing.mp3"></audio>
+
+    <!-- pemanggilan jquery -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+
+    <script>
+      $("document").ready(function () {
+        $("#div1").mouseover(function () {
+          $(this).css({
+            background:
+              "url('https://www.shutterstock.com/image-vector/vector-horizontal-illustration-isolated-different-260nw-1716509089.jpg')",
+          });
+          $("#catsound")[0].play();
+        });
+        $("div").mouseout(function () {
+          $(this).css({
+            background: "greenyellow",
+          });
+        });
+      });
+
+      $("document").ready(function () {
+        $("#div2").mouseover(function () {
+          $(this).css({
+            background:
+              "url('https://www.shutterstock.com/image-vector/chicken-life-cycle-realistic-horizontal-260nw-1324831394.jpg')",
+          });
+          $("#chicksound")[0].play();
+        });
+      });
+
+      $("document").ready(function () {
+        $("#div3").mouseover(function () {
+          $(this).css({
+            background:
+              "url('https://media.istockphoto.com/id/926026268/id/foto/berbagai-anjing-horizontal-web-banner.jpg?s=170667a&w=0&k=20&c=xzy3XjQ-ai6b9ZIKKQvdcsnnu0NlTpyVOEBYqX99I1g=')",
+            // "background-repeat": "no-repeat"
+          });
+          $("#dogsound")[0].play();
+        });
+      });
+    </script>
+  </body>
+</html>
